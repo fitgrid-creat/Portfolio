@@ -33,6 +33,7 @@
 </head>
 <body class="antialiased">
 
+    <!-- Fixed Navigation -->
     <header class="fixed top-0 w-full z-50 glass-card rounded-none border-x-0 border-t-0 px-6 py-4">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <div class="flex items-center gap-2 font-bold text-xl">
@@ -55,25 +56,26 @@
             <div class="max-w-3xl">
                 <h2 class="section-title">01. Motivation & <span class="text-primary">Research</span></h2>
                 <div class="subsection-title"><i data-lucide="help-circle" class="w-5"></i> The Why</div>
-                <p class="text-textMuted leading-relaxed mb-10">
-                    FITGRID 旨在解决健身房高峰期拥挤带来的挫败感。通过实时的流量追踪和科学的 MET 矩阵校准，我们帮助用户从混乱的计划转变为清晰的、可视化的运动路径。
+                <!-- 根据用户修正历史，采用段落形式整合目标陈述 -->
+                <p class="text-textMuted leading-relaxed mb-10 text-justify">
+                    FITGRID (或称 FitMatrix) 旨在通过科学的数字化手段解决健身房资源分配不均与训练计划混乱的痛点。作为西交利物浦大学 (XJTLU) 的学生，我们注意到用户常因高峰期场地拥挤而产生挫败感。通过引入代谢等效值 (MET) 计算 与实时流量追踪，我们致力于将复杂的生理校准转化为直观、有趣的交互体验，从而提升用户的长期训练动力。
                 </p>
             </div>
 
             <div class="grid lg:grid-cols-2 gap-8">
                 <div class="glass-card p-8">
-                    <div class="subsection-title"><i data-lucide="layers" class="w-5"></i> The Gap: Research & Products</div>
+                    <div class="subsection-title"><i data-lucide="layers" class="w-5"></i> Research Insights</div>
                     <div class="space-y-4 mt-4">
                         <div class="p-4 bg-white/5 rounded-xl border border-white/5">
-                            <div class="text-sm font-bold mb-2">Pain Points to Address</div>
+                            <div class="text-sm font-bold mb-2">Targeting the Gap</div>
                             <div class="grid grid-cols-2 gap-4 text-[11px]">
                                 <ul class="text-green-400">
-                                    <li>✔ 科学的生理数据校准</li>
-                                    <li>✔ 实时健身房负荷显示</li>
+                                    <li>✔ 实时拥挤度反馈机制</li>
+                                    <li>✔ 基于生理矩阵的科学排课</li>
                                 </ul>
                                 <ul class="text-accent">
-                                    <li>✖ 消除混乱的训练计划</li>
-                                    <li>✖ 缓解高峰时段拥挤</li>
+                                    <li>✖ 解决计划过于碎片化问题</li>
+                                    <li>✖ 优化高峰时段训练体验</li>
                                 </ul>
                             </div>
                         </div>
@@ -88,7 +90,7 @@
                         </div>
                         <div class="bg-surface rounded-2xl overflow-hidden border border-white/5 text-center">
                             <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400&q=80" class="w-full h-32 object-cover">
-                            <div class="p-3"><div class="text-white font-bold text-sm">Secondary</div><div class="text-[10px] text-textMuted">Experienced Trainer</div></div>
+                            <div class="p-3"><div class="text-white font-bold text-sm">Secondary</div><div class="text-[10px] text-textMuted">Pro Trainer</div></div>
                         </div>
                     </div>
                 </div>
@@ -101,34 +103,80 @@
             <div class="grid lg:grid-cols-3 gap-8">
                 <div class="lg:col-span-2 glass-card overflow-hidden border border-white/10">
                     <div class="p-6 pb-0 subsection-title"><i data-lucide="map" class="w-5"></i> User Journey Map</div>
-                    <!-- 已经替换为你提供的图片路径 -->
-                    <img src="input_file_0.png" alt="FITGRID User Journey Map" class="w-full h-auto object-contain mt-4">
+                    <!-- 此处已替换为指定的图片文件名 -->
+                    <img src="image_76ee80.jpg" alt="User Journey Map" class="w-full h-auto object-contain mt-4">
                 </div>
                 <div class="space-y-8">
                     <div class="glass-card p-6">
                         <div class="subsection-title">"Playful" Requirements</div>
-                        <ul class="text-sm text-textMuted space-y-2 mt-2">
-                            <li>• 必须有：九宫格导航菜单 (9-grid)</li>
-                            <li>• 必须有：实时健身房饱和度追踪</li>
-                            <li>• 必须有：清晰的动作引导说明</li>
+                        <ul class="text-sm text-textMuted space-y-3 mt-2">
+                            <li class="flex items-center gap-2"><i data-lucide="grid-3x3" class="w-4 text-primary"></i> 9-grid 导航菜单交互</li>
+                            <li class="flex items-center gap-2"><i data-lucide="bar-chart-2" class="w-4 text-primary"></i> 实时拥挤度 (Occupancy) 可视化</li>
+                            <li class="flex items-center gap-2"><i data-lucide="smile" class="w-4 text-primary"></i> 情感导向的进度反馈机制</li>
                         </ul>
                     </div>
                     <div class="glass-card p-6">
                         <div class="subsection-title">Evidence of Life</div>
-                        <p class="text-[10px] text-textMuted mb-4">Site Observation & Interviews at Gym</p>
+                        <p class="text-[10px] text-textMuted mb-4">Observation at XJTLU Gym</p>
                         <div class="grid grid-cols-3 gap-2">
-                            <img src="evidence1.jpg" class="aspect-square rounded-lg object-cover">
-                            <img src="evidence2.jpg" class="aspect-square rounded-lg object-cover">
-                            <img src="evidence3.jpg" class="aspect-square rounded-lg object-cover">
+                            <div class="aspect-square bg-surfaceLight rounded-lg"></div>
+                            <div class="aspect-square bg-surfaceLight rounded-lg"></div>
+                            <div class="aspect-square bg-surfaceLight rounded-lg"></div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 此处省略 SECTION 3, 4, 5 (保持之前代码逻辑) -->
-        <!-- ... -->
+        <!-- SECTION 3: IDEATION -->
+        <section id="ideation" class="space-y-12">
+            <h2 class="section-title">03. Ideation & <span class="text-primary">Alternatives</span></h2>
+            <div class="glass-card p-8">
+                <div class="subsection-title">The “Crazy Eights”</div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
+                    <div class="aspect-[3/4] bg-surfaceLight border border-dashed border-white/20 rounded-xl"></div>
+                    <div class="aspect-[3/4] bg-surfaceLight border border-dashed border-white/20 rounded-xl"></div>
+                    <div class="aspect-[3/4] bg-surfaceLight border border-dashed border-white/20 rounded-xl"></div>
+                    <div class="aspect-[3/4] bg-surfaceLight border border-dashed border-white/20 rounded-xl"></div>
+                </div>
+            </div>
+        </section>
 
+        <!-- SECTION 4: TECHNICAL IMPLEMENTATION -->
+        <section id="technical" class="space-y-12">
+            <h2 class="section-title">04. Technical <span class="text-primary">Implementation</span></h2>
+            <div class="glass-card p-8">
+                <div class="subsection-title"><i data-lucide="users" class="w-5"></i> Individual Contributions</div>
+                <div class="overflow-x-auto mt-6">
+                    <table class="w-full text-sm text-left">
+                        <thead class="text-textMuted border-b border-white/10 uppercase text-[10px] tracking-widest">
+                            <tr>
+                                <th class="pb-4">Member</th>
+                                <th class="pb-4">Core Role</th>
+                                <th class="pb-4">Deliverables</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-white/5 text-gray-300">
+                            <tr><td class="py-4 font-bold">You</td><td>Full-Stack Dev</td><td>MET/TDEE Algorithm, Core Logic</td></tr>
+                            <tr><td class="py-4 font-bold">Haijin Xia</td><td>Frontend</td><td>Dashboards & API Integration</td></tr>
+                            <tr><td class="py-4 font-bold">Yifan Xu</td><td>Architect</td><td>Architecture Diagram & Backend</td></tr>
+                            <tr><td class="py-4 font-bold">Yiyang Lu</td><td>UI/UX</td><td>Hi-Fi Prototype & Testing</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: EVALUATION -->
+        <section id="evaluation" class="space-y-12">
+            <h2 class="section-title">05. Evaluation & <span class="text-primary">Reflection</span></h2>
+            <div class="glass-card p-8 border-t-4 border-accent">
+                <div class="subsection-title">AI Usage Declaration</div>
+                <p class="text-sm text-textMuted mt-4">
+                    本项目利用 AI 进行代码优化与文案润色，但在核心交互逻辑与用户体验决策上坚持人工干预，确保符合学术规范。
+                </p>
+            </div>
+        </section>
     </main>
 
     <footer class="py-20 text-center border-t border-white/5">
