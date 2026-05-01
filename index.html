@@ -1,4 +1,57 @@
-<!-- SECTION 1: MOTIVATION & RESEARCH -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>FITGRID | Process Portfolio</title>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0A84FF',
+                        accent: '#FF375F',
+                        surface: '#1C1C1E',
+                        surfaceLight: '#2C2C2E',
+                        textMuted: '#8E8E93',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+        body { background-color: #000; color: #fff; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .glass-card { background: rgba(28, 28, 30, 0.7); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 24px; }
+        .section-title { font-size: 2.5rem; font-weight: 800; letter-spacing: -0.05em; margin-bottom: 1.5rem; }
+        .subsection-title { color: #0A84FF; font-weight: 700; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem; }
+        .nav-active { color: #fff !important; border-bottom: 2px solid #0A84FF; }
+        img { background-color: #2C2C2E; object-fit: cover; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Fixed Navigation -->
+    <header class="fixed top-0 w-full z-50 glass-card rounded-none border-x-0 border-t-0 px-6 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-2 font-bold text-xl">
+                <i data-lucide="activity" class="text-primary"></i> FITGRID
+            </div>
+            <nav class="hidden md:flex gap-8 text-sm font-medium text-textMuted">
+                <a href="#motivation" class="hover:text-white transition-colors">1. Motivation</a>
+                <a href="#requirements" class="hover:text-white transition-colors">2. Requirements</a>
+                <a href="#ideation" class="hover:text-white transition-colors">3. Ideation</a>
+                <a href="#technical" class="hover:text-white transition-colors">4. Technical</a>
+                <a href="#evaluation" class="hover:text-white transition-colors">5. Reflection</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pt-32 pb-20 max-w-7xl mx-auto px-6 space-y-40">
+
+        <!-- SECTION 1: MOTIVATION & RESEARCH -->
         <section id="motivation" class="space-y-16">
             <div>
                 <h2 class="section-title">01. Motivation & <span class="text-primary">Research</span></h2>
@@ -101,3 +154,209 @@
                 </div>
             </div>
         </section>
+
+
+            
+        <!-- SECTION 2: USER REQUIREMENTS -->
+        <section id="requirements" class="space-y-12">
+            <h2 class="section-title">02. User <span class="text-primary">Requirements</span></h2>
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- User Journey Map -->
+                <div class="lg:col-span-2 glass-card overflow-hidden border border-white/10 flex flex-col">
+                    <div class="p-6 pb-2 subsection-title"><i data-lucide="map" class="w-5"></i> User Journey Map</div>
+                    <div class="flex-1 p-6">
+                        <img src="user-journey-map.png" alt="User Journey Map" class="w-full h-full object-contain rounded-xl shadow-2xl">
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+                    <!-- Requirements List (Playful Must-haves) -->
+                    <div class="glass-card p-6">
+                        <div class="subsection-title">Requirements List</div>
+                        <p class="text-[10px] text-textMuted mb-4">3 must-haves for the system to be considered “Playful”</p>
+                        <ul class="text-xs text-textMuted space-y-4">
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="layout-grid" class="w-4 text-primary shrink-0"></i>
+                                <span><b>Visual Grid Calibration:</b> Replaces traditional text inputs with an interactive 3x3 grid to make physiological goal-setting intuitive and engaging.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="activity" class="w-4 text-primary shrink-0"></i>
+                                <span><b>Live Occupancy Feedback:</b> Utilizes dynamic pulses and color-coded scales to display real-time gym load, significantly increasing data transparency.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="palette" class="w-4 text-primary shrink-0"></i>
+                                <span><b>Adaptive Interface Theming:</b> Switches UI color schemes dynamically based on user attributes to provide immediate, personalized visual confirmation.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Evidence of Life (5 Photo Positions) -->
+                    <div class="glass-card p-6">
+                        <div class="subsection-title">Evidence of Life</div>
+                        <p class="text-[10px] text-textMuted mb-4">Interviews or Site Observation (XJTLU Gym)</p>
+                        <div class="grid grid-cols-3 gap-2">
+                            <img src="evidence-of-life1.jpg" class="aspect-square rounded-lg bg-surfaceLight border border-white/5">
+                            <img src="evidence-of-life2.jpg" class="aspect-square rounded-lg bg-surfaceLight border border-white/5">
+                            <img src="evidence-of-life3.jpg" class="aspect-square rounded-lg bg-surfaceLight border border-white/5">
+                            <img src="evidence-of-life4.jpg" class="aspect-square rounded-lg bg-surfaceLight border border-white/5">
+                            <img src="evidence-of-life5.jpg" class="aspect-square rounded-lg bg-surfaceLight border border-white/5">
+                            <div class="aspect-square rounded-lg border border-dashed border-white/10 flex items-center justify-center">
+                                <i data-lucide="plus" class="text-white/10 w-4"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: IDEATION -->
+        <section id="ideation" class="space-y-12">
+            <h2 class="section-title">03. Ideation & <span class="text-primary">Alternatives</span></h2>
+            
+            <div class="glass-card p-8">
+                <div class="subsection-title"><i data-lucide="edit-3" class="w-5"></i> The “Crazy Eights”</div>
+                <p class="text-[10px] text-textMuted mb-6">8 rapid hand-drawn sketches of different UI ideas</p>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
+                    <img src="sketch-1.jpg" alt="Sketch 1" class="aspect-[3/4] rounded-xl border border-white/5 hover:scale-105 transition-transform">
+                    <img src="sketch-2.jpg" alt="Sketch 2" class="aspect-[3/4] rounded-xl border border-white/5 hover:scale-105 transition-transform">
+                    <img src="sketch-3.jpg" alt="Sketch 3" class="aspect-[3/4] rounded-xl border border-white/5 hover:scale-105 transition-transform">
+                    <img src="sketch-4.jpg" alt="Sketch 4" class="aspect-[3/4] rounded-xl border border-white/5 hover:scale-105 transition-transform">
+                    <img src="sketch-5.jpg" alt="Sketch 5" class="aspect-[3/4] rounded-xl border border-white/5 hover:scale-105 transition-transform">
+                    <img src="sketch-6.jpg" alt="Sketch 6" class="aspect-[3/4] rounded-xl border border-white/5 hover:scale-105 transition-transform">
+                    <img src="sketch-7.jpg" alt="Sketch 7" class="aspect-[3/4] rounded-xl border border-white/5 hover:scale-105 transition-transform">
+                    <img src="sketch-8.jpg" alt="Sketch 8" class="aspect-[3/4] rounded-xl border border-white/5 hover:scale-105 transition-transform">
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="glass-card p-8 flex flex-col">
+                    <div class="subsection-title">Design Alternatives</div>
+                    <div class="space-y-4 mt-4">
+                        <div class="p-4 bg-white/5 rounded-xl border border-white/5">
+                            <h4 class="text-xs font-bold text-primary uppercase mb-2">Alternative A: List-based Plan</h4>
+                            <p class="text-sm text-textMuted">Traditional text-heavy exercise lists without visual context.</p>
+                        </div>
+                        <div class="p-4 bg-white/5 rounded-xl border border-white/5">
+                            <h4 class="text-xs font-bold text-primary uppercase mb-2">Alternative B: Matrix-driven UI</h4>
+                            <p class="text-sm text-textMuted">Interactive grid mapping body types to scientific MET protocols.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass-card p-8 flex flex-col items-center justify-center text-center">
+                    <div class="subsection-title self-start">Low-Fi Prototype</div>
+                    <div class="my-6">
+                        <i data-lucide="mouse-pointer-2" class="w-12 h-12 text-primary/40"></i>
+                    </div>
+                    <a href="#" target="_blank" class="px-10 py-3 bg-primary text-white text-sm font-bold rounded-full flex items-center gap-2 hover:bg-blue-600 transition-all">
+                        Open Figma Prototype <i data-lucide="external-link" class="w-4"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: TECHNICAL IMPLEMENTATION -->
+        <section id="technical" class="space-y-12">
+            <h2 class="section-title">04. Technical <span class="text-primary">Implementation</span></h2>
+            
+            <div class="grid lg:grid-cols-2 gap-8">
+                <div class="glass-card p-8">
+                    <div class="subsection-title"><i data-lucide="database" class="w-5"></i> System Architecture</div>
+                    <div class="bg-surface rounded-xl overflow-hidden border border-white/5 p-4 mt-4">
+                        <img src="system-architecture.png" alt="Architecture" class="w-full h-auto object-contain">
+                    </div>
+                </div>
+
+                <div class="glass-card p-8 flex flex-col">
+                    <div class="subsection-title"><i data-lucide="globe" class="w-5"></i> High-Fi Prototype</div>
+                    <div class="flex-1 flex flex-col items-center justify-center space-y-6">
+                        <div class="p-4 bg-primary/10 border border-primary/20 rounded-2xl w-full text-center">
+                            <code class="text-primary font-mono text-sm">https://fitgrid-demo.vercel.app</code>
+                        </div>
+                        <a href="#" target="_blank" class="w-full py-4 bg-white text-black text-center font-bold rounded-full hover:bg-gray-200 transition-colors">
+                            Launch Live System
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-card p-8">
+                <div class="subsection-title"><i data-lucide="user-check" class="w-5"></i> Individual Contributions</div>
+                <div class="overflow-x-auto mt-6">
+                    <table class="w-full text-sm text-left">
+                        <thead class="text-textMuted border-b border-white/10 uppercase text-[10px] tracking-widest">
+                            <tr>
+                                <th class="pb-4 pr-4">Member Name</th>
+                                <th class="pb-4 pr-4">Focus Area</th>
+                                <th class="pb-4">Specific Contributions</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-white/5 text-gray-300">
+                            <tr>
+                                <td class="py-4 font-bold pr-4">You</td>
+                                <td class="py-4 pr-4">Full-Stack Dev</td>
+                                <td class="py-4 text-textMuted">Core MET/TDEE algorithm logic, Firebase integration, and Matrix UI implementation.</td>
+                            </tr>
+                            <tr>
+                                <td class="py-4 font-bold pr-4">Haijin Xia</td>
+                                <td class="py-4 pr-4">Frontend Dev</td>
+                                <td class="py-4 text-textMuted">Chart.js data visualization components and real-time gym load chart rendering.</td>
+                            </tr>
+                            <tr>
+                                <td class="py-4 font-bold pr-4">Yifan Xu</td>
+                                <td class="py-4 pr-4">Architect</td>
+                                <td class="py-4 text-textMuted">System data flow design, Firestore schema definition, and backend API setup.</td>
+                            </tr>
+                            <tr>
+                                <td class="py-4 font-bold pr-4">Yiyang Lu</td>
+                                <td class="py-4 pr-4">UI/UX Design</td>
+                                <td class="py-4 text-textMuted">High-fidelity Figma prototyping, component styling, and usability testing coordination.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: EVALUATION & REFLECTION -->
+        <section id="evaluation" class="space-y-12">
+            <h2 class="section-title">05. Evaluation & <span class="text-primary">Reflection</span></h2>
+            <div class="glass-card p-8 border-t-4 border-accent">
+                <div class="subsection-title">Final Reflection</div>
+                <div class="grid md:grid-cols-2 gap-8 mt-4 text-sm text-textMuted">
+                    <div>
+                        <h4 class="text-white font-bold mb-2 underline">Social & Ethical Implications</h4>
+                        <p>We addressed data privacy by using Firebase Auth and ensured body-positive language in our matrix descriptions to avoid promoting body dysmorphia among students.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-bold mb-2 underline">AI Usage</h4>
+                        <p>AI was used to optimize Tailwind CSS layouts, polish the Energy Systems Guide content, and assist in debuggin complex Chart.js configurations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="py-20 text-center border-t border-white/5">
+        <p class="text-textMuted text-xs tracking-widest uppercase">© 2026 XJTLU - FITGRID PROJECT TEAM</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        window.addEventListener('scroll', () => {
+            const sections = ['motivation', 'requirements', 'ideation', 'technical', 'evaluation'];
+            sections.forEach(id => {
+                const el = document.getElementById(id);
+                const link = document.querySelector(`nav a[href="#${id}"]`);
+                if (el && link) {
+                    const rect = el.getBoundingClientRect();
+                    if (rect.top >= 0 && rect.top <= 400) {
+                        document.querySelectorAll('nav a').forEach(l => l.classList.remove('nav-active'));
+                        link.classList.add('nav-active');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
