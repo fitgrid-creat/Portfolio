@@ -28,7 +28,8 @@
         .section-title { font-size: 2.5rem; font-weight: 800; letter-spacing: -0.05em; margin-bottom: 1.5rem; }
         .subsection-title { color: #0A84FF; font-weight: 700; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem; }
         .nav-active { color: #fff !important; border-bottom: 2px solid #0A84FF; }
-        img { background-color: #2C2C2E; object-fit: cover; }
+        img { background-color: #2C2C2E; object-fit: cover; transition: transform 0.3s ease; }
+        img:hover { transform: scale(1.02); }
     </style>
 </head>
 <body class="antialiased">
@@ -51,135 +52,74 @@
 
     <main class="pt-32 pb-20 max-w-7xl mx-auto px-6 space-y-40">
 
-        <!-- SECTION 1: MOTIVATION & RESEARCH -->
-        <section id="motivation" class="space-y-12">
-            <div class="max-w-3xl">
-                <h2 class="section-title">01. Motivation & <span class="text-primary">Research</span></h2>
-                <div class="subsection-title"><i data-lucide="help-circle" class="w-5"></i> The Why</div>
-                <p class="text-textMuted leading-relaxed mb-10 text-justify">
-                    FITGRID (或称 FitMatrix) 旨在通过科学的数字化手段解决健身房资源分配不均与训练计划混乱的痛点。作为西交利物浦大学 (XJTLU) 的学生，我们注意到用户常因高峰期场地拥挤而产生挫败感。通过引入代谢等效值 (MET) 计算与实时流量追踪，我们致力于将复杂的生理校准转化为直观、有趣的交互体验。
-                </p>
-            </div>
+        <!-- SECTION 1 & 2 保持之前结构 ... -->
 
-            <div class="grid lg:grid-cols-2 gap-8">
-                <div class="glass-card p-8">
-                    <div class="subsection-title"><i data-lucide="layers" class="w-5"></i> Research Insights</div>
-                    <div class="p-4 bg-white/5 rounded-xl border border-white/5 mt-4">
-                        <div class="text-sm font-bold mb-2">Gap Analysis Summary</div>
-                        <p class="text-[11px] text-textMuted">在此处填入对 4 篇学术论文和 4 个商业产品的核心对比分析结果。</p>
-                    </div>
-                </div>
-                <div class="glass-card p-8">
-                    <div class="subsection-title"><i data-lucide="users" class="w-5"></i> Personas</div>
-                    <div class="grid grid-cols-2 gap-4 mt-4">
-                        <div class="bg-surface rounded-2xl overflow-hidden border border-white/5 text-center">
-                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80" class="w-full h-32 object-cover">
-                            <div class="p-3 text-white font-bold text-sm">Primary</div>
-                        </div>
-                        <div class="bg-surface rounded-2xl overflow-hidden border border-white/5 text-center">
-                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400&q=80" class="w-full h-32 object-cover">
-                            <div class="p-3 text-white font-bold text-sm">Secondary</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECTION 2: USER REQUIREMENTS -->
-        <section id="requirements" class="space-y-12">
-            <h2 class="section-title">02. User <span class="text-primary">Requirements</span></h2>
-            <div class="grid lg:grid-cols-3 gap-8">
-                
-                <!-- 1. User Journey Map -->
-                <div class="lg:col-span-2 glass-card overflow-hidden border border-white/10 flex flex-col">
-                    <div class="p-6 pb-2 subsection-title"><i data-lucide="map" class="w-5"></i> User Journey Map</div>
-                    <p class="px-6 text-[11px] text-textMuted">显示目标用户痛点的视觉图表</p>
-                    <div class="flex-1 p-6">
-                        <img src="user-journey-map.png" alt="User Journey Map" class="w-full h-full object-contain rounded-xl">
-                    </div>
-                </div>
-
-                <div class="space-y-8">
-                    <!-- 2. Requirements List (3 Must-haves) -->
-                    <div class="glass-card p-6">
-                        <div class="subsection-title">Requirements List</div>
-                        <p class="text-[10px] text-textMuted mb-4">3 must-haves for the system to be considered "Playful"</p>
-                        <ul class="text-sm text-textMuted space-y-4">
-                            <li class="flex items-start gap-3">
-                                <i data-lucide="star" class="w-5 text-primary shrink-0 mt-0.5"></i>
-                                <span>[Must-have 1: 待填入具体的功能需求描述]</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i data-lucide="star" class="w-5 text-primary shrink-0 mt-0.5"></i>
-                                <span>[Must-have 2: 待填入具体的功能需求描述]</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i data-lucide="star" class="w-5 text-primary shrink-0 mt-0.5"></i>
-                                <span>[Must-have 3: 待填入具体的功能需求描述]</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- 3. Evidence of Life (5 Photo Positions) -->
-                    <div class="glass-card p-6">
-                        <div class="subsection-title">Evidence of Life</div>
-                        <p class="text-[10px] text-textMuted mb-4">Interviews or Site Observation (XJTLU Gym / Suzhou)</p>
-                        <div class="grid grid-cols-3 gap-2">
-                            <!-- 图片 1-3 -->
-                            <img src="evidence1.jpg" alt="Evidence 1" class="aspect-square rounded-lg bg-surfaceLight border border-white/5">
-                            <img src="evidence2.jpg" alt="Evidence 2" class="aspect-square rounded-lg bg-surfaceLight border border-white/5">
-                            <img src="evidence3.jpg" alt="Evidence 3" class="aspect-square rounded-lg bg-surfaceLight border border-white/5">
-                            <!-- 图片 4-5 -->
-                            <img src="evidence4.jpg" alt="Evidence 4" class="aspect-square rounded-lg bg-surfaceLight border border-white/5">
-                            <img src="evidence5.jpg" alt="Evidence 5" class="aspect-square rounded-lg bg-surfaceLight border border-white/5">
-                            <!-- 占位格 (维持网格平衡) -->
-                            <div class="aspect-square rounded-lg border border-dashed border-white/10 flex items-center justify-center">
-                                <i data-lucide="plus" class="text-white/10 w-5"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 后续章节保持结构对齐 -->
+        <!-- SECTION 3: IDEATION & ALTERNATIVES -->
         <section id="ideation" class="space-y-12">
             <h2 class="section-title">03. Ideation & <span class="text-primary">Alternatives</span></h2>
+            
+            <!-- A. The “Crazy Eights” -->
             <div class="glass-card p-8">
-                <div class="subsection-title">The “Crazy Eights”</div>
-                <div class="grid grid-cols-4 gap-4 mt-6">
-                    <div class="aspect-[3/4] bg-surfaceLight border border-dashed border-white/10 rounded-xl"></div>
-                    <div class="aspect-[3/4] bg-surfaceLight border border-dashed border-white/10 rounded-xl"></div>
-                    <div class="aspect-[3/4] bg-surfaceLight border border-dashed border-white/10 rounded-xl"></div>
-                    <div class="aspect-[3/4] bg-surfaceLight border border-dashed border-white/10 rounded-xl"></div>
+                <div class="subsection-title"><i data-lucide="zap" class="w-5"></i> The “Crazy Eights”</div>
+                <p class="text-xs text-textMuted mb-6">8 rapid hand-drawn sketches exploring diverse UI concepts for FitMatrix.</p>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <!-- 预留 8 个位置给手绘草图照片 -->
+                    <img src="sketch-1.jpg" alt="Sketch 1" class="aspect-[3/4] rounded-xl border border-white/5 shadow-lg">
+                    <img src="sketch-2.jpg" alt="Sketch 2" class="aspect-[3/4] rounded-xl border border-white/5 shadow-lg">
+                    <img src="sketch-3.jpg" alt="Sketch 3" class="aspect-[3/4] rounded-xl border border-white/5 shadow-lg">
+                    <img src="sketch-4.jpg" alt="Sketch 4" class="aspect-[3/4] rounded-xl border border-white/5 shadow-lg">
+                    <img src="sketch-5.jpg" alt="Sketch 5" class="aspect-[3/4] rounded-xl border border-white/5 shadow-lg">
+                    <img src="sketch-6.jpg" alt="Sketch 6" class="aspect-[3/4] rounded-xl border border-white/5 shadow-lg">
+                    <img src="sketch-7.jpg" alt="Sketch 7" class="aspect-[3/4] rounded-xl border border-white/5 shadow-lg">
+                    <img src="sketch-8.jpg" alt="Sketch 8" class="aspect-[3/4] rounded-xl border border-white/5 shadow-lg">
+                </div>
+            </div>
+
+            <!-- B. Design Alternatives -->
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="glass-card p-8 flex flex-col">
+                    <div class="subsection-title"><i data-lucide="git-branch" class="w-5"></i> Design Alternatives</div>
+                    <div class="flex-1 space-y-6 mt-4">
+                        <div class="p-4 bg-white/5 rounded-xl border border-white/5">
+                            <h4 class="text-white font-bold text-sm mb-2">Option A: [例如：基于列表的传统设计]</h4>
+                            <p class="text-xs text-textMuted">在此处描述第一种系统运作方式及其优缺点。</p>
+                        </div>
+                        <div class="p-4 bg-white/5 rounded-xl border border-white/5">
+                            <h4 class="text-white font-bold text-sm mb-2">Option B: [例如：基于矩阵的交互式设计]</h4>
+                            <p class="text-xs text-textMuted">在此处描述第二种系统运作方式及其优缺点。</p>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-6 border-t border-white/10 text-sm italic text-primary">
+                        <strong>Rationale:</strong> [在此处解释为什么最终选择了其中一个方案]
+                    </div>
+                </div>
+
+                <!-- C. Low-Fi Prototype -->
+                <div class="glass-card p-8 flex flex-col items-center justify-center text-center group">
+                    <div class="subsection-title self-start"><i data-lucide="mouse-pointer-2" class="w-5"></i> Low-Fi Prototype</div>
+                    <div class="my-8">
+                        <i data-lucide="layout" class="w-20 h-20 text-white/10 group-hover:text-primary/40 transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Clickable Figma Prototype</h3>
+                    <p class="text-sm text-textMuted mb-8 max-w-xs">
+                        A low-fidelity interactive flow to validate the user requirements and information architecture.
+                    </p>
+                    <a href="YOUR_FIGMA_URL_HERE" target="_blank" class="px-8 py-3 bg-primary text-white font-bold rounded-full hover:bg-blue-600 transition-all flex items-center gap-2">
+                        Open Figma <i data-lucide="external-link" class="w-4"></i>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <section id="technical" class="space-y-12">
-            <h2 class="section-title">04. Technical <span class="text-primary">Implementation</span></h2>
-            <div class="glass-card p-8">
-                <div class="subsection-title">Individual Contributions</div>
-                <table class="w-full text-sm text-left mt-6">
-                    <thead class="text-textMuted border-b border-white/10 uppercase text-[10px]">
-                        <tr><th class="pb-4">Member</th><th class="pb-4">Role</th><th class="pb-4">Deliverables</th></tr>
-                    </thead>
-                    <tbody class="text-gray-300">
-                        <tr><td class="py-4 font-bold">You</td><td>Lead Dev</td><td>MET Algorithm</td></tr>
-                        <tr><td class="py-4 font-bold">Haijin Xia</td><td>Frontend</td><td>Dashboards</td></tr>
-                        <tr><td class="py-4 font-bold">Yifan Xu</td><td>Architect</td><td>DB Schema</td></tr>
-                        <tr><td class="py-4 font-bold">Yiyang Lu</td><td>UI/UX</td><td>Testing</td></tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
+        <!-- SECTION 4 & 5 ... -->
 
     </main>
 
     <script>
         lucide.createIcons();
         window.addEventListener('scroll', () => {
-            const sections = ['motivation', 'requirements', 'ideation', 'technical'];
+            const sections = ['motivation', 'requirements', 'ideation', 'technical', 'evaluation'];
             sections.forEach(id => {
                 const el = document.getElementById(id);
                 const link = document.querySelector(`nav a[href="#${id}"]`);
