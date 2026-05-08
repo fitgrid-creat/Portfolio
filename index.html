@@ -587,7 +587,7 @@
 
     
 
-            <div class="glass-card p-8 md:p-10 hover:-translate-y-1 transition-all">
+  <div class="glass-card p-8 md:p-10 hover:-translate-y-1 transition-all">
                 <div class="subsection-title"><i data-lucide="arrow-right-left" class="w-5 h-5"></i> 5.2 Iterative Improvement</div>
                 <p class="text-sm text-textMuted mt-2 mb-8 text-justify">
                     Based on the insights gathered from the usability testing, we refined our design. The following comparison highlights the key modifications made to address user feedback.
@@ -598,18 +598,13 @@
                         <div class="flex items-center gap-2 text-rose-400 font-bold text-xs uppercase tracking-widest bg-rose-500/10 w-fit px-3 py-1.5 rounded-lg border border-rose-500/20">
                             <i data-lucide="x-circle" class="w-4 h-4"></i> Before: Alpha Version
                         </div>
-                        <div class="aspect-[4/3] bg-surfaceLight rounded-xl border border-white/10 overflow-hidden relative group">
-                            <img src="before-iteration.jpg" alt="Alpha UI Before Iteration" class="w-full h-full object-cover opacity-50 group-hover:opacity-80 transition-opacity">
-                            <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-                                <span class="px-4 py-2 bg-black/60 rounded-lg text-white/70 text-xs border border-white/10 backdrop-blur-sm">
-                                    [Insert Before Screenshot]
-                                </span>
-                            </div>
+                        <div class="bg-surfaceLight/50 rounded-xl border border-white/10 overflow-hidden relative group p-4 h-[500px] flex items-center justify-center">
+                            <img src="before-iteration.jpg" alt="Alpha UI Before Iteration" class="w-full h-full object-contain opacity-80 group-hover:opacity-100 transition-opacity drop-shadow-2xl rounded-lg">
                         </div>
-                        <div class="p-4 bg-white/[0.02] border border-white/5 rounded-xl">
-                            <h5 class="text-white text-sm font-bold mb-1">Identified Issue:</h5>
+                        <div class="p-5 bg-white/[0.02] border border-white/5 rounded-xl">
+                            <h5 class="text-white text-sm font-bold mb-2">Identified Issue:</h5>
                             <p class="text-[13px] text-textMuted leading-relaxed">
-                                [Describe the problem users faced in the Alpha version here...]
+                                The Alpha version lacked a clear Call-to-Action (CTA) at the bottom of the screen. Users reviewed the matrix data but were unsure of how to proceed to actual scheduling.
                             </p>
                         </div>
                     </div>
@@ -618,24 +613,32 @@
                         <div class="flex items-center gap-2 text-emerald-400 font-bold text-xs uppercase tracking-widest bg-emerald-500/10 w-fit px-3 py-1.5 rounded-lg border border-emerald-500/20">
                             <i data-lucide="check-circle-2" class="w-4 h-4"></i> After: Refined Version
                         </div>
-                        <div class="aspect-[4/3] bg-surfaceLight rounded-xl border border-emerald-500/30 overflow-hidden relative group shadow-[0_0_20px_rgba(16,185,129,0.1)]">
-                            <img src="after-iteration.jpg" alt="Refined UI After Iteration" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity">
-                            <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-                                <span class="px-4 py-2 bg-emerald-500/80 rounded-lg text-white text-xs border border-emerald-400/50 backdrop-blur-sm shadow-lg">
-                                    [Insert After Screenshot]
-                                </span>
-                            </div>
+                        <div class="bg-surfaceLight/50 rounded-xl border border-emerald-500/30 overflow-hidden relative group shadow-[0_0_20px_rgba(16,185,129,0.05)] p-4 h-[500px] flex items-center justify-center">
+                            <img src="after-iteration.jpg" alt="Refined UI After Iteration" class="w-full h-full object-contain opacity-90 group-hover:opacity-100 transition-opacity drop-shadow-2xl rounded-lg">
                         </div>
-                        <div class="p-4 bg-emerald-500/5 border border-emerald-500/10 rounded-xl">
-                            <h5 class="text-white text-sm font-bold mb-1">Design Solution:</h5>
+                        <div class="p-5 bg-emerald-500/5 border border-emerald-500/10 rounded-xl">
+                            <h5 class="text-white text-sm font-bold mb-2">Design Solution:</h5>
                             <p class="text-[13px] text-textMuted leading-relaxed">
-                                [Describe the changes made to fix the issue and improve usability here...]
+                                Added a prominent, high-contrast <span class="text-white font-medium">"Generate My Plan →"</span> button. This immediately guides the user from data review to actionable planning.
                             </p>
                         </div>
                     </div>
                 </div>
+
+                <div class="mt-10 p-5 bg-primary/10 border-l-4 border-primary rounded-r-xl">
+                    <h5 class="text-white font-bold text-sm mb-2 flex items-center gap-2">
+                        <i data-lucide="message-square-heart" class="w-4 h-4 text-primary"></i> Post-Iteration Feedback
+                    </h5>
+                    <p class="text-[13px] text-textMuted leading-relaxed text-justify">
+                        After the modification, we conducted follow-up interviews with three users. All of them stated that upon seeing the button, they immediately understood that clicking it would enable them to create their own exercise plan.
+                    </p>
+                </div>
             </div>
 
+
+
+
+    
             <div class="glass-card p-8 md:p-10 border-t-4 border-t-accent hover:border-white/20 transition-all">
                 <div class="subsection-title text-accent mb-8"><i data-lucide="lightbulb" class="w-5 h-5"></i> 5.3 Final Reflection: Social & Ethical Implications</div>
                 
