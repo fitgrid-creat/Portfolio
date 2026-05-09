@@ -638,28 +638,24 @@
 
 
                 
-                <!-- AI Generation Disclosure -->
+               <!-- AI Generation Disclosure -->
                 <div class="glass-card p-8 md:p-10 border-l-4 border-l-primary hover:-translate-y-1 transition-all flex flex-col">
-                    <div class="subsection-title mb-6"><i data-lucide="sparkles" class="w-5 h-5 text-primary"></i> 6.2 AI Disclosure & Methodology</div>
-                    <div class="space-y-4 text-textMuted text-sm leading-relaxed flex-1">
-                        <p class="bg-white/5 p-4 rounded-xl border border-white/5">
-                            <b class="text-white">Generative AI Tools:</b> We utilized <span class="text-primary">Gemini 1.5 Pro</span> and <span class="text-primary">Claude 3.5 Sonnet</span> as collaborative assistants throughout the project lifecycle.
-                        </p>
-                        <h5 class="text-white font-bold text-xs uppercase tracking-widest mt-6 mb-2 flex items-center gap-2">
-                            <i data-lucide="check-check" class="w-3.5 h-3.5 text-primary"></i> How AI Was Utilized:
-                        </h5>
-                        <ul class="grid grid-cols-1 gap-2 text-[13px]">
-                            <li class="flex items-center gap-2 p-2 rounded-lg hover:bg-white/5 transition-colors"><i data-lucide="terminal" class="w-3.5 h-3.5 text-primary"></i> CSS & Component Framework Optimization (Tailwind)</li>
-                            <li class="flex items-center gap-2 p-2 rounded-lg hover:bg-white/5 transition-colors"><i data-lucide="languages" class="w-3.5 h-3.5 text-primary"></i> Academic Language Polishing & Content Structuring</li>
-                            <li class="flex items-center gap-2 p-2 rounded-lg hover:bg-white/5 transition-colors"><i data-lucide="file-video" class="w-3.5 h-3.5 text-primary"></i> Script Drafting & Video Narrative Refinement</li>
-                            <li class="flex items-center gap-2 p-2 rounded-lg hover:bg-white/5 transition-colors"><i data-lucide="shield-check" class="w-3.5 h-3.5 text-primary"></i> Integrity Verification & Logical Consistency Checks</li>
-                        </ul>
-                        <div class="mt-6 p-4 rounded-xl border border-white/5 bg-surfaceLight/20 text-[12px] italic">
-                            The team maintains 100% manual authorship over core architectural logic, UX design decisions, original research findings, and code implementation. AI was exclusively used as a productivity and linguistic tool.
-                        </div>
+                    <div class="subsection-title mb-6"><i data-lucide="sparkles" class="w-5 h-5 text-primary"></i> 6.2 AI Disclosure</div>
+                    
+                    <ul class="text-[13px] text-textMuted space-y-4 flex-1">
+                        <li class="pl-4 border-l-2 border-white/10 hover:border-primary transition-colors leading-relaxed">
+                            [1] Claude 3.5 Sonnet, v1.0, accessed on 2026-02-24, available at <a href="https://claude.ai/" target="_blank" class="text-primary hover:underline transition-colors">https://claude.ai</a>. Used for refining the user persona descriptions and generating the initial storyboard script for the Video Demo.
+                        </li>
+                        <li class="pl-4 border-l-2 border-white/10 hover:border-primary transition-colors leading-relaxed">
+                            [2] Cursor, v0.40, accessed on 2026-02-24, available at <a href="https://cursor.com/" target="_blank" class="text-primary hover:underline transition-colors">https://cursor.com</a>. Used for vibe coding the system's backend API and debugging the CSS layout for mobile responsiveness.
+                        </li>
+                    </ul>
+
+                    <!-- 保留了底部的免责声明，体现学术诚信 -->
+                    <div class="mt-8 p-4 rounded-xl border border-white/5 bg-surfaceLight/20 text-[12px] italic text-textMuted">
+                        The team maintains 100% manual authorship over core architectural logic, UX design decisions, original research findings, and code implementation.
                     </div>
                 </div>
-            </div>
         </section>
 
     </main>
