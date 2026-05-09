@@ -50,13 +50,12 @@
         }
 
         /* -------------------------------------------
-           核心动画框架：FLIP Layouts
+           核心动画框架：FLIP Layouts (一镜到底)
            ------------------------------------------- */
         #dynamic-header {
             position: fixed; top: 0; left: 0; right: 0; z-index: 50;
         }
 
-        /* 状态 1：开屏巨大目录 */
         .intro-layout {
             height: 100vh;
             display: flex; flex-direction: column; align-items: center; justify-content: center;
@@ -71,13 +70,12 @@
         }
         .intro-layout .nav-link {
             font-size: clamp(1.25rem, 3vw, 1.75rem);
-            color: #71717a; /* zinc-500 */
+            color: #71717a; 
             text-transform: uppercase; font-family: 'JetBrains Mono', monospace; 
             letter-spacing: 0.1em; font-weight: bold; cursor: pointer;
         }
         .intro-layout .nav-link:hover { color: #fff; }
 
-        /* 状态 2：吸顶导航栏 */
         .nav-layout {
             height: 72px;
             display: flex; flex-direction: row; align-items: center; justify-content: space-between;
@@ -93,7 +91,7 @@
         }
         .nav-layout .nav-link {
             font-size: 0.75rem;
-            color: #a1a1aa; /* zinc-400 */
+            color: #a1a1aa; 
             text-transform: uppercase; font-family: 'JetBrains Mono', monospace; 
             letter-spacing: 0.1em; font-weight: bold; cursor: pointer;
         }
@@ -166,7 +164,7 @@
     <!-- 暗幕层，开屏纯黑 -->
     <div id="intro-bg" class="fixed inset-0 z-40 bg-[#030303] transition-opacity duration-1000 ease-in-out"></div>
 
-    <!-- 单一的动态 Header，配合 JS 实现文字平移 -->
+    <!-- 单一的动态 Header，配合 JS 实现文字平移 (FLIP 核心容器) -->
     <header id="dynamic-header">
         <div id="header-container" class="intro-layout max-w-7xl mx-auto w-full">
             <!-- 磁性 Logo -->
@@ -232,7 +230,7 @@
                             <div class="card-content p-8 flex flex-col">
                                 <div class="flex justify-between items-center mb-10">
                                     <h4 class="font-black text-white text-3xl tracking-tight color-collide-target">Keep</h4>
-                                    <div class="text-[10px] text-[#00E5FF] bg-[#00E5FF]/10 border border-[#00E5FF]/20 px-3 py-1.5 rounded font-mono uppercase tracking-widest">Online Platform</div>
+                                    <div class="text-[10px] text-[#00E5FF] bg-[#00E5FF]/10 border border-[#00E5FF]/20 px-3 py-1.5 rounded font-mono uppercase tracking-widest transition-colors">Online Platform</div>
                                 </div>
                                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 flex-1 text-[15px]">
                                     <div class="space-y-3">
@@ -255,7 +253,7 @@
                             <div class="card-content p-8 flex flex-col">
                                 <div class="flex justify-between items-center mb-10">
                                     <h4 class="font-black text-white text-3xl tracking-tight color-collide-target">Lefit</h4>
-                                    <div class="text-[10px] text-[#D4FF00] bg-[#D4FF00]/10 border border-[#D4FF00]/20 px-3 py-1.5 rounded font-mono uppercase tracking-widest">Smart Gym</div>
+                                    <div class="text-[10px] text-[#D4FF00] bg-[#D4FF00]/10 border border-[#D4FF00]/20 px-3 py-1.5 rounded font-mono uppercase tracking-widest transition-colors">Smart Gym</div>
                                 </div>
                                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 flex-1 text-[15px]">
                                     <div class="space-y-3">
@@ -278,7 +276,7 @@
                             <div class="card-content p-8 flex flex-col">
                                 <div class="flex justify-between items-center mb-10">
                                     <h4 class="font-black text-white text-3xl tracking-tight color-collide-target">Xunji</h4>
-                                    <div class="text-[10px] text-[#FF3366] bg-[#FF3366]/10 border border-[#FF3366]/20 px-3 py-1.5 rounded font-mono uppercase tracking-widest">Hardcore Tracker</div>
+                                    <div class="text-[10px] text-[#FF3366] bg-[#FF3366]/10 border border-[#FF3366]/20 px-3 py-1.5 rounded font-mono uppercase tracking-widest transition-colors">Hardcore Tracker</div>
                                 </div>
                                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 flex-1 text-[15px]">
                                     <div class="space-y-3">
@@ -301,7 +299,7 @@
                             <div class="card-content p-8 flex flex-col">
                                 <div class="flex justify-between items-center mb-10">
                                     <h4 class="font-black text-white text-3xl tracking-tight color-collide-target">Supermonkey</h4>
-                                    <div class="text-[10px] text-[#9D00FF] bg-[#9D00FF]/10 border border-[#9D00FF]/20 px-3 py-1.5 rounded font-mono uppercase tracking-widest">Boutique Class</div>
+                                    <div class="text-[10px] text-[#9D00FF] bg-[#9D00FF]/10 border border-[#9D00FF]/20 px-3 py-1.5 rounded font-mono uppercase tracking-widest transition-colors">Boutique Class</div>
                                 </div>
                                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 flex-1 text-[15px]">
                                     <div class="space-y-3">
@@ -322,7 +320,97 @@
                     </div>
                 </div>
 
-                <!-- Stakeholders (Bento Style) -->
+                <!-- Academic Gaps: Literature Review (RE-INTEGRATED FULL CONTENT) -->
+                <div class="space-y-6 mt-32 reveal">
+                    <div class="flex items-center justify-between mb-8 border-b border-white/10 pb-4">
+                        <h3 class="text-white font-bold text-2xl tracking-tight">Academic Gaps: Literature Review</h3>
+                        <div class="font-mono text-[10px] text-[#00E5FF] bg-[#00E5FF]/10 px-3 py-1 rounded uppercase tracking-widest">Theoretical Pros vs Gaps</div>
+                    </div>
+                    
+                    <div class="grid lg:grid-cols-2 gap-4">
+                        <!-- 1. Visualizing Goals -->
+                        <div class="rauno-card group" style="--glow-color: #00E5FF;">
+                            <div class="card-content p-8 flex flex-col">
+                                <div class="mb-8">
+                                    <h4 class="font-black text-white text-xl tracking-tight mb-2 color-collide-target">1. Visualizing Goals</h4>
+                                    <div class="text-[11px] text-zinc-400 font-mono">(Affordances in mobile apps, 2025)</div>
+                                </div>
+                                <div class="grid grid-cols-1 gap-6 flex-1 text-justify">
+                                    <div>
+                                        <div class="text-[10px] font-bold text-[#00E5FF] uppercase tracking-widest mb-2"><span class="mr-1">+</span> Theoretical Pros</div>
+                                        <p class="text-[14px] text-zinc-300 leading-relaxed">Confirmed that visual design significantly lowers cognitive barriers; demonstrated that app-based health empowerment enhances long-term adherence; provides cutting-edge theoretical support for setting goals via intuitive outcome images.</p>
+                                    </div>
+                                    <div class="border-t border-white/5 pt-6">
+                                        <div class="text-[10px] font-bold text-zinc-500 uppercase tracking-widest mb-2"><span class="mr-1">-</span> Academic Gaps</div>
+                                        <p class="text-[14px] text-zinc-400 leading-relaxed group-hover:text-zinc-300 transition-colors">Lacks practical details on specific visual interaction forms; ignores the expectation gap caused by users' varying genetic differences; fails to explore how online visual goals integrate with offline gym services.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 2. Crowding & Anxiety -->
+                        <div class="rauno-card group" style="--glow-color: #D4FF00;">
+                            <div class="card-content p-8 flex flex-col">
+                                <div class="mb-8">
+                                    <h4 class="font-black text-white text-xl tracking-tight mb-2 color-collide-target">2. Crowding & Anxiety</h4>
+                                    <div class="text-[11px] text-zinc-400 font-mono">(Perceived Crowding, 2023)</div>
+                                </div>
+                                <div class="grid grid-cols-1 gap-6 flex-1 text-justify">
+                                    <div>
+                                        <div class="text-[10px] font-bold text-[#D4FF00] uppercase tracking-widest mb-2"><span class="mr-1">+</span> Theoretical Pros</div>
+                                        <p class="text-[14px] text-zinc-300 leading-relaxed">Rigorously quantified the destructive impact of "perceived crowding" on exercise motivation; clearly stated that high spatial density triggers social anxiety; theoretically justified the necessity of "real-time crowdedness tracking" from an environmental psychology perspective.</p>
+                                    </div>
+                                    <div class="border-t border-white/5 pt-6">
+                                        <div class="text-[10px] font-bold text-zinc-500 uppercase tracking-widest mb-2"><span class="mr-1">-</span> Academic Gaps</div>
+                                        <p class="text-[14px] text-zinc-400 leading-relaxed group-hover:text-zinc-300 transition-colors">Proposed solutions rely too heavily on passive crowd control by gym operators; lacks discussion on proactive interventions using mobile app data; fails to differentiate crowding levels across various functional zones within the gym.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 3. Spatial Barriers -->
+                        <div class="rauno-card group" style="--glow-color: #FF3366;">
+                            <div class="card-content p-8 flex flex-col">
+                                <div class="mb-8">
+                                    <h4 class="font-black text-white text-xl tracking-tight mb-2 color-collide-target">3. Spatial Barriers</h4>
+                                    <div class="text-[11px] text-zinc-400 font-mono">(Home Fitness Application, 2023)</div>
+                                </div>
+                                <div class="grid grid-cols-1 gap-6 flex-1 text-justify">
+                                    <div>
+                                        <div class="text-[10px] font-bold text-[#FF3366] uppercase tracking-widest mb-2"><span class="mr-1">+</span> Theoretical Pros</div>
+                                        <p class="text-[14px] text-zinc-300 leading-relaxed">Identified dual constraints of time and space as core barriers to visiting physical gyms; verified the commercial potential of home fitness models in sustaining exercise routines; supported the logic of "at-home private training" to break physical space barriers.</p>
+                                    </div>
+                                    <div class="border-t border-white/5 pt-6">
+                                        <div class="text-[10px] font-bold text-zinc-500 uppercase tracking-widest mb-2"><span class="mr-1">-</span> Academic Gaps</div>
+                                        <p class="text-[14px] text-zinc-400 leading-relaxed group-hover:text-zinc-300 transition-colors">Limited solely to one-way screen-based video workouts; overlooks the psychological inertia users develop without supervision while exercising alone at home; completely lacks exploration of the highly flexible O2O (online-to-offline) at-home coaching model.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 4. Decision Friction -->
+                        <div class="rauno-card group" style="--glow-color: #9D00FF;">
+                            <div class="card-content p-8 flex flex-col">
+                                <div class="mb-8">
+                                    <h4 class="font-black text-white text-xl tracking-tight mb-2 color-collide-target">4. Decision Friction</h4>
+                                    <div class="text-[11px] text-zinc-400 font-mono">(Goal-setting in Apps, 2020)</div>
+                                </div>
+                                <div class="grid grid-cols-1 gap-6 flex-1 text-justify">
+                                    <div>
+                                        <div class="text-[10px] font-bold text-[#9D00FF] uppercase tracking-widest mb-2"><span class="mr-1">+</span> Theoretical Pros</div>
+                                        <p class="text-[14px] text-zinc-300 leading-relaxed">Proved that goal-setting mechanisms crucially guide health behaviors based on massive user datasets; confirmed that reducing initial decision friction greatly boosts user activity; highlighted the critical role of lowering心理 barriers in overcoming exercise resistance.</p>
+                                    </div>
+                                    <div class="border-t border-white/5 pt-6">
+                                        <div class="text-[10px] font-bold text-zinc-500 uppercase tracking-widest mb-2"><span class="mr-1">-</span> Academic Gaps</div>
+                                        <p class="text-[14px] text-zinc-400 leading-relaxed group-hover:text-zinc-300 transition-colors">Research still focuses on traditional, abstract metrics like calories; severely lacks comparative analysis of "image-based/non-quantified" goal-setting methods; fails to create a closed-loop system connecting app goals with real-world physical spatial experiences.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stakeholders -->
                 <div class="mt-32 reveal">
                     <div class="flex items-center justify-between mb-8 border-b border-white/10 pb-4">
                         <h3 class="text-white font-bold text-2xl tracking-tight">The Stakeholders</h3>
@@ -550,7 +638,7 @@
                             </div>
                             <h4 class="text-white font-bold text-lg mb-1 color-collide-target">Zhichong Zhao</h4>
                             <div class="text-[11px] text-[#00E5FF] font-bold uppercase tracking-widest mb-4 bg-[#00E5FF]/10 w-max px-2 py-1 rounded">Research Lead</div>
-                            <ul class="text-[13px] text-zinc-300 space-y-2 font-medium flex-1 list-disc pl-4">
+                            <ul class="text-[14px] text-zinc-300 space-y-2 font-medium flex-1 list-disc pl-4">
                                 <li>Led "Motivation & Research" rationale.</li>
                                 <li>Synthesized 4 papers & 4 products.</li>
                                 <li>Defined stakeholders & Personas.</li>
@@ -610,11 +698,11 @@
             </div>
         </section>
 
-        <!-- SECTION 5: EVALUATION -->
+        <!-- SECTION 5: EVALUATION & REFLECTION -->
         <section id="evaluation" class="scroll-mt-32">
             <div class="reveal">
                 <h2 class="section-title">Evaluation <span class="text-zinc-600 italic font-light">&</span><br>Reflection.</h2>
-                <p class="section-subtitle">Iterating based on empirical user feedback.</p>
+                <p class="section-subtitle">Iterating based on empirical user feedback and technical rigor.</p>
             </div>
             
             <div class="rauno-card reveal mb-16" style="--glow-color: #D4FF00;">
@@ -630,6 +718,7 @@
                     </div>
 
                     <div class="grid md:grid-cols-2 gap-8 relative">
+                        <!-- 居中箭头修正 -->
                         <div class="hidden md:flex absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-black border border-[#D4FF00]/50 rounded-full z-10 items-center justify-center text-[#D4FF00]">
                             <i data-lucide="arrow-right" class="w-4 h-4"></i>
                         </div>
@@ -646,28 +735,7 @@
                 </div>
             </div>
 
-            <!-- NEW: Technical Reflection -->
-            <div class="reveal mt-32">
-                <div class="flex items-center justify-between mb-8 border-b border-white/10 pb-4">
-                    <h3 class="text-white font-bold text-2xl tracking-tight">Technical Reflection</h3>
-                    <div class="font-mono text-[10px] text-zinc-400 uppercase tracking-widest">Methodology</div>
-                </div>
-                <div class="rauno-card" style="--glow-color: #00E5FF;">
-                    <div class="card-content p-8 md:p-12 space-y-8">
-                        <div class="text-[15px] text-zinc-300 leading-relaxed space-y-6">
-                            <p>We utilized <strong class="text-white">Gemini</strong> to accelerate the development of our frontend components and specific interactive logic. To ensure the output met our design and functional requirements, we used highly specific prompts across three key areas:</p>
-                            <ul class="space-y-4 list-none pl-0">
-                                <li class="flex gap-4"><span class="text-[#00E5FF] font-bold">•</span> <div><strong class="text-white">Core Frontend UI:</strong> We directed the AI to generate a layout strictly following a "dark mode glassmorphism" aesthetic. The prompt explicitly required the use of deep black backgrounds, translucent surface layers, and smooth transition animations for all hover effects to create a premium visual experience.</div></li>
-                                <li class="flex gap-4"><span class="text-[#00E5FF] font-bold">•</span> <div><strong class="text-white">3x3 Fitness Matrix Selector (Core Logic):</strong> We instructed the AI to build an interactive 3x3 matrix component for selecting workout intensity. Our prompt enforced three strict functional requirements: (1) highlighting clicked cells with a glowing accent color, (2) saving the selected value into a state variable, and (3) rendering a "Generate Plan" button below the grid that remains inactive until a cell is selected.</div></li>
-                                <li class="flex gap-4"><span class="text-[#00E5FF] font-bold">•</span> <div><strong class="text-white">Real-Time Gym Crowding Detection:</strong> To handle live data, we prompted the AI to generate the necessary API interfaces and logic for real-time data transmission, simulating the live gym occupancy updates.</div></li>
-                            </ul>
-                            <p class="pt-4 border-t border-white/5">Multiple verification methods were adopted to ensure the AI-generated code fully met user requirements, including conducting <strong class="text-white">functional testing</strong> to examine whether core features such as personalised fitness planning, group time selection, real-time gym crowd checking and private lesson booking operated as intended, alongside <strong class="text-white">user requirement checklist validation</strong> to align developed functions with real needs gathered from questionnaires and interviews, with unreasonable logic revised and optimised iteratively throughout the process.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- NEW: Social/Ethical Implications -->
+            <!-- Social & Ethical Implications -->
             <div class="reveal mt-32">
                 <div class="flex items-center justify-between mb-8 border-b border-white/10 pb-4">
                     <h3 class="text-white font-bold text-2xl tracking-tight">Social & Ethical Implications</h3>
@@ -693,9 +761,30 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Technical Reflection -->
+            <div class="reveal mt-32">
+                <div class="flex items-center justify-between mb-8 border-b border-white/10 pb-4">
+                    <h3 class="text-white font-bold text-2xl tracking-tight">Technical Reflection</h3>
+                    <div class="font-mono text-[10px] text-zinc-400 uppercase tracking-widest">Methodology</div>
+                </div>
+                <div class="rauno-card" style="--glow-color: #00E5FF;">
+                    <div class="card-content p-8 md:p-12 space-y-8">
+                        <div class="text-[15px] text-zinc-300 leading-relaxed space-y-6">
+                            <p>We utilized <strong class="text-white">Gemini</strong> to accelerate the development of our frontend components and specific interactive logic. To ensure the output met our design and functional requirements, we used highly specific prompts across three key areas:</p>
+                            <ul class="space-y-4 list-none pl-0">
+                                <li class="flex gap-4"><span class="text-[#00E5FF] font-bold">•</span> <div><strong class="text-white">Core Frontend UI:</strong> We directed the AI to generate a layout strictly following a "dark mode glassmorphism" aesthetic. The prompt explicitly required the use of deep black backgrounds, translucent surface layers, and smooth transition animations for all hover effects to create a premium visual experience.</div></li>
+                                <li class="flex gap-4"><span class="text-[#00E5FF] font-bold">•</span> <div><strong class="text-white">3x3 Fitness Matrix Selector (Core Logic):</strong> We instructed the AI to build an interactive 3x3 matrix component for selecting workout intensity. Our prompt enforced three strict functional requirements: (1) highlighting clicked cells with a glowing accent color, (2) saving the selected value into a state variable, and (3) rendering a "Generate Plan" button below the grid that remains inactive until a cell is selected.</div></li>
+                                <li class="flex gap-4"><span class="text-[#00E5FF] font-bold">•</span> <div><strong class="text-white">Real-Time Gym Crowding Detection:</strong> To handle live data, we prompted the AI to generate the necessary API interfaces and logic for real-time data transmission, simulating the live gym occupancy updates.</div></li>
+                            </ul>
+                            <p class="pt-4 border-t border-white/5">Multiple verification methods were adopted to ensure the AI-generated code fully met user requirements, including conducting <strong class="text-white">functional testing</strong> to examine whether core features such as personalised fitness planning, group time selection, real-time gym crowd checking and private lesson booking operated as intended, alongside <strong class="text-white">user requirement checklist validation</strong> to align developed functions with real needs gathered from questionnaires and interviews, with unreasonable logic revised and optimised iteratively throughout the process.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <!-- SECTION 6: REFERENCES -->
+        <!-- SECTION 6: REFERENCES (MONOCHROMATIC & CORRECTED) -->
         <section id="references" class="scroll-mt-32">
             <div class="reveal">
                 <div class="flex items-center justify-between mb-8 border-b border-white/10 pb-4">
@@ -706,27 +795,27 @@
                     <div class="card-content p-8 md:p-12">
                         <ul class="space-y-6 text-[14px] text-zinc-300 leading-relaxed text-justify">
                             <li class="flex gap-4 group">
-                                <span class="text-[#00E5FF] font-mono font-bold shrink-0">[1]</span>
-                                <span>Gemini, accessed on 2026-04-22, available at <a href="https://gemini.google.com" class="underline underline-offset-4">https://gemini.google.com</a>. Used for generating user profiles cartoon images, user journey maps cartoon graphics, system architecture graphics, and writing the frontend code.</span>
+                                <span class="text-white font-mono font-bold shrink-0">[1]</span>
+                                <span>Gemini, accessed on 2026-04-22, available at <a href="https://gemini.google.com" class="underline underline-offset-4 hover:text-white transition-colors">https://gemini.google.com</a>. Used for generating user profiles cartoon images, user journey maps cartoon graphics, system architecture graphics, and writing the frontend code.</span>
                             </li>
                             <li class="flex gap-4 group">
-                                <span class="text-[#D4FF00] font-mono font-bold shrink-0">[2]</span>
-                                <span>Doubao, v2.0, accessed on 2026-05-08, available at <a href="https://www.doubao.com" class="underline underline-offset-4">https://www.doubao.com</a>. Used for generating the initial storyboard script for the Video Demo.</span>
+                                <span class="text-white font-mono font-bold shrink-0">[2]</span>
+                                <span>Doubao, v2.0, accessed on 2026-05-08, available at <a href="https://www.doubao.com" class="underline underline-offset-4 hover:text-white transition-colors">https://www.doubao.com</a>. Used for generating the initial storyboard script for the Video Demo.</span>
                             </li>
                             <li class="flex gap-4 group">
-                                <span class="text-[#FF3366] font-mono font-bold shrink-0 opacity-50">[3]</span>
+                                <span class="text-white font-mono font-bold shrink-0">[3]</span>
                                 <span>X. Zheng et al., "Leveraging mobile fitness apps for healthier lifestyles: How affordances drive sustained engagement," <i>Internet Research</i>, vol. 35, 2025.</span>
                             </li>
                             <li class="flex gap-4 group">
-                                <span class="text-[#9D00FF] font-mono font-bold shrink-0 opacity-50">[4]</span>
+                                <span class="text-white font-mono font-bold shrink-0">[4]</span>
                                 <span>A. R. et al., "Exploring Motivation, Perceived Crowding and Satisfaction Among Mountaineers and Recreationists," in <i>Advances in Hospitality and Leisure</i>, Bingley: Emerald Publishing Limited, 2023, pp. 115-135.</span>
                             </li>
                             <li class="flex gap-4 group">
-                                <span class="text-zinc-500 font-mono font-bold shrink-0 opacity-50">[5]</span>
+                                <span class="text-white font-mono font-bold shrink-0">[5]</span>
                                 <span>S. Kim and Y. Cho, "Effects of Content Characteristics and Improvement in User Satisfaction on the Reuse of Home Fitness Application," <i>Sustainability</i>, vol. 15, no. 10, Art. no. 8371, May 2023.</span>
                             </li>
                             <li class="flex gap-4 group">
-                                <span class="text-zinc-500 font-mono font-bold shrink-0 opacity-50">[6]</span>
+                                <span class="text-white font-mono font-bold shrink-0">[6]</span>
                                 <span>D. A. et al., "Goal-setting And Achievement In Activity Tracking Apps: A Case Study Of MyFitnessPal," in <i>Proceedings of the The Web Conference</i>, 2020, pp. 2853-2859.</span>
                             </li>
                         </ul>
@@ -747,8 +836,13 @@
     </footer>
 
     <script>
-        lucide.createIcons();
-        
+        // --- 修复 Lucide 未定义的报错：确保库加载完成后再初始化 ---
+        function initLucide() {
+            if (typeof lucide !== 'undefined' && lucide.createIcons) {
+                lucide.createIcons();
+            }
+        }
+
         // --- 1. 终极一镜到底动画 (FLIP Animation) ---
         let isIntroActive = true;
         let isAnimating = false;
@@ -839,6 +933,8 @@
 
         window.addEventListener('DOMContentLoaded', () => {
              window.scrollTo(0, 0);
+             initLucide(); // 初始化图标
+             
              document.fonts.ready.then(() => {
                  const preloader = document.getElementById('font-preloader');
                  if (preloader) {
