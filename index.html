@@ -638,26 +638,88 @@
 
 
                 
-               <!-- AI Generation Disclosure -->
-                <div class="glass-card p-8 md:p-10 border-l-4 border-l-primary hover:-translate-y-1 transition-all flex flex-col">
-                    <div class="subsection-title mb-6"><i data-lucide="sparkles" class="w-5 h-5 text-primary"></i> 6.2 AI Disclosure</div>
+              <!-- AI Generation Disclosure & Reflection -->
+                <div class="glass-card p-8 md:p-10 border-l-4 border-l-primary hover:-translate-y-1 transition-all flex flex-col h-full">
+                    <div class="subsection-title mb-6"><i data-lucide="sparkles" class="w-5 h-5 text-primary"></i> 6.2 AI Disclosure & Reflection</div>
                     
-                    <ul class="text-[13px] text-textMuted space-y-4 flex-1">
-                        <li class="pl-4 border-l-2 border-white/10 hover:border-primary transition-colors leading-relaxed">
-                            [1] Claude 3.5 Sonnet, v1.0, accessed on 2026-02-24, available at <a href="https://claude.ai/" target="_blank" class="text-primary hover:underline transition-colors">https://claude.ai</a>. Used for refining the user persona descriptions and generating the initial storyboard script for the Video Demo.
-                        </li>
-                        <li class="pl-4 border-l-2 border-white/10 hover:border-primary transition-colors leading-relaxed">
-                            [2] Cursor, v0.40, accessed on 2026-02-24, available at <a href="https://cursor.com/" target="_blank" class="text-primary hover:underline transition-colors">https://cursor.com</a>. Used for vibe coding the system's backend API and debugging the CSS layout for mobile responsiveness.
-                        </li>
-                    </ul>
+                    <p class="text-[13px] text-textMuted mb-6 leading-relaxed text-justify">
+                        In accordance with the project guidelines, we utilized Generative AI as an assistive tool. Below is a reflection on our AI usage using the <span class="text-white font-medium">P.O.A. (Prompt, Outcome, Action)</span> framework.
+                    </p>
 
-                    <!-- 保留了底部的免责声明，体现学术诚信 -->
-                    <div class="mt-8 p-4 rounded-xl border border-white/5 bg-surfaceLight/20 text-[12px] italic text-textMuted">
-                        The team maintains 100% manual authorship over core architectural logic, UX design decisions, original research findings, and code implementation.
+                    <div class="space-y-6 flex-1">
+                        
+                        <!-- Example 1: Code Generation -->
+                        <div class="bg-surfaceLight/30 border border-white/5 rounded-2xl p-5 space-y-4 hover:bg-white/[0.03] transition-colors">
+                            <h5 class="text-white font-bold text-[13px] border-b border-white/10 pb-2 mb-3 flex items-center gap-2">
+                                <i data-lucide="code" class="w-4 h-4 text-primary"></i> Example 1: UI Component Generation (Cursor)
+                            </h5>
+                            
+                            <!-- P -->
+                            <div class="flex items-start gap-3">
+                                <span class="px-1.5 py-0.5 bg-blue-500/20 text-blue-400 font-bold text-[10px] rounded border border-blue-500/20 mt-0.5">P</span>
+                                <div class="text-[12px] text-textMuted leading-relaxed">
+                                    <strong class="text-white/80 font-semibold">Prompt:</strong> "Generate a dark mode glassmorphism card using Tailwind CSS, including hover effects and a blurred background for a fitness dashboard."
+                                </div>
+                            </div>
+                            
+                            <!-- O -->
+                            <div class="flex items-start gap-3">
+                                <span class="px-1.5 py-0.5 bg-amber-500/20 text-amber-400 font-bold text-[10px] rounded border border-amber-500/20 mt-0.5">O</span>
+                                <div class="text-[12px] text-textMuted leading-relaxed">
+                                    <strong class="text-white/80 font-semibold">Outcome:</strong> The AI provided a functional layout. However, the <code>backdrop-blur</code> value was too high, making background elements unrecognizable. It also added heavy borders that broke our minimalist aesthetic. It was partially successful but visually flawed.
+                                </div>
+                            </div>
+
+                            <!-- A -->
+                            <div class="flex items-start gap-3">
+                                <span class="px-1.5 py-0.5 bg-emerald-500/20 text-emerald-400 font-bold text-[10px] rounded border border-emerald-500/20 mt-0.5">A</span>
+                                <div class="text-[12px] text-textMuted leading-relaxed">
+                                    <strong class="text-white/80 font-semibold">Action:</strong> I abandoned the AI's border styling. I manually modified the CSS to use a subtle <code>blur(24px)</code> and added a custom <code>rgba(255,255,255,0.08)</code> border. I then adjusted my future prompts to explicitly specify "minimalist design with cubic-bezier transitions."
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Example 2: Content Generation -->
+                        <div class="bg-surfaceLight/30 border border-white/5 rounded-2xl p-5 space-y-4 hover:bg-white/[0.03] transition-colors">
+                            <h5 class="text-white font-bold text-[13px] border-b border-white/10 pb-2 mb-3 flex items-center gap-2">
+                                <i data-lucide="file-text" class="w-4 h-4 text-primary"></i> Example 2: Persona Drafting (Claude 3.5 Sonnet)
+                            </h5>
+                            
+                            <!-- P -->
+                            <div class="flex items-start gap-3">
+                                <span class="px-1.5 py-0.5 bg-blue-500/20 text-blue-400 font-bold text-[10px] rounded border border-blue-500/20 mt-0.5">P</span>
+                                <div class="text-[12px] text-textMuted leading-relaxed">
+                                    <strong class="text-white/80 font-semibold">Prompt:</strong> "Act as a UX researcher. Expand on this brief: 'University student who hates crowded gyms' into a full persona with pain points and goals."
+                                </div>
+                            </div>
+                            
+                            <!-- O -->
+                            <div class="flex items-start gap-3">
+                                <span class="px-1.5 py-0.5 bg-amber-500/20 text-amber-400 font-bold text-[10px] rounded border border-amber-500/20 mt-0.5">O</span>
+                                <div class="text-[12px] text-textMuted leading-relaxed">
+                                    <strong class="text-white/80 font-semibold">Outcome:</strong> The generated persona structure was excellent. However, the content heavily focused on "losing weight/counting calories"—which explicitly contradicts our project's core requirement of an "Intuitive Low-Barrier Experience."
+                                </div>
+                            </div>
+
+                            <!-- A -->
+                            <div class="flex items-start gap-3">
+                                <span class="px-1.5 py-0.5 bg-emerald-500/20 text-emerald-400 font-bold text-[10px] rounded border border-emerald-500/20 mt-0.5">A</span>
+                                <div class="text-[12px] text-textMuted leading-relaxed">
+                                    <strong class="text-white/80 font-semibold">Action:</strong> I kept the structural template but completely rewrote the "Goals" and "Pain Points" manually to align with our literature review on "Perceived Crowding" and "Visual Matrix." I learned that AI lacks context on specific academic gaps unless explicitly fed that data.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Academic Integrity Disclaimer -->
+                    <div class="mt-6 p-4 rounded-xl border border-white/5 bg-surfaceLight/20 text-[11px] italic text-textMuted">
+                        * The team maintains 100% manual authorship over core architectural logic, UX design decisions, original research findings, and final code implementation.
                     </div>
                 </div>
-        </section>
 
+
+                
     </main>
 
     <footer class="py-12 border-t border-white/10 bg-black/50 backdrop-blur-lg">
